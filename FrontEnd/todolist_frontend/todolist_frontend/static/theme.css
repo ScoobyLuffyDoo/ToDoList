@@ -2,7 +2,21 @@
 body {
   /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  color: #ffffff;
-  background: #bc2131; */
+  color: #ffffff; */
+  /* background: #bc2131; */
 }
-/* 
+
+ .home-container{
+  display: grid;
+  grid-template-columns: auto auto auto  ;
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+
+.home-container  h1 ,h2 , p{
+  text-align: center;
+}
+.To_DO_search{
+  text-align: center;
+}

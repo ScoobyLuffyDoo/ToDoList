@@ -1,0 +1,22 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  
+<div class="home-container">
+
+<div></div>
+
+<div>
+<h1>Welcome</h1>
+<h2>To Do List</h2>
+<hr />
+<form class="To_DO_search" method="GET" action="listitem/">
+    <input type="text" name='q' Placeholder="Search for Items..">     
+</form>
+<br>
+{%for item in items %}
+<p>{{item}}</p>
+{%endfor%}
+</div>
+<div></div>
+{% endblock content %}
