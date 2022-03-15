@@ -1,0 +1,31 @@
+Docker:
+    Create 2 containers:
+        ToDoList_FrontEnd
+        ToDoList_BackEnd
+    Create Docker Compose files
+
+Container1 : ToDoList_FrontEnd
+    Note:
+        Use Pyramid Web FrameWork as Front end application
+        Use Jinja2 for the Template
+    
+    Application:
+        Home Page: View all the TO Do Items in a for loop
+            - "Search bar" 
+            - "Add Item Button"
+
+        Search Option: 
+            - When searching Refresh Home page with new list Items
+            - add validations
+
+        Add Item Button:
+            - redirect to a new Page "AddItemPage"
+
+        AddItemPage:
+            - Page Normal Info
+            - Add Input field 
+            - Submit Button 
+
+        AddItemPage:Submit Button:
+            - redirect to home page with message at top "Item Added at the bottom"
+            - Display list with Item Added at the bottom
