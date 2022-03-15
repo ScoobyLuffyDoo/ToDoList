@@ -1,0 +1,21 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  
+<div class="home-container">
+
+<div></div>
+
+<div>
+<h1>Create an Item to do</h1>
+<h2>To Do List</h2>
+<hr />
+<div class="key_input_data">
+<form class="To_DO_search" method="POST">
+    <textarea required class="form-control" id="i_Item_id" name="i_Item" placeholder="Add Item..." minlength="10" maxlength="100" rows="1"/></textarea>
+    <button type="submit" class="btn btn-primary">Add Item</button>
+</form>
+</div>
+<br>
+
+{% endblock content %}

@@ -10,10 +10,14 @@
 <h1>Welcome</h1>
 <h2>To Do List</h2>
 <hr />
-<form class="To_DO_search" method="GET" action="listitem/">
+<div class="key_input_data">
+<form class="To_DO_search" method="GET" action="/">
     <input type="text" name='q' Placeholder="Search for Items..">     
+    <button type="submit">Search</button> <a class="btn btn--main" href="/addItem">Add Item</a>
 </form>
+</div>
 <br>
+
 {%for item in items %}
 <p>{{item}}</p>
 {%endfor%}

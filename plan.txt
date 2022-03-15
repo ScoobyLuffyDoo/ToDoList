@@ -10,6 +10,8 @@ Container1 : ToDoList_FrontEnd
         Use Jinja2 for the Template
     
     Application:
+        Note:
+            - Flash messages
         Home Page: View all the TO Do Items in a for loop
             - "Search bar" 
             - "Add Item Button"
