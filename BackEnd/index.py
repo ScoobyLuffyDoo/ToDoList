@@ -21,15 +21,19 @@ class Todolist(db.Model):
 @app.route("/search", methods=['GET'])
 def Search_to_do_items():
     if request.method == 'GET':
-        request_data = request.get_json() 
-        reference = request_data["reference"]  
+        reference = request.args.get('reference') 
         respond =[]
         try:
-            response = Todolist.query.filter(Todolist.item.like('%{}%'.format(reference)))
-            for result in response:
-                value = {'item':result.item}
-                respond.append(value)
-            context = json.dumps(respond, indent=2)
+            if reference:
+                response = Todolist.query.filter(Todolist.item.like('%{}%'.format(reference)))
+                for result in response:
+                    respond.append(result.item)  
+                context = json.dumps(respond, indent=2)
+            else:
+                response = db.session.query(Todolist).all()  
+                for result in response:
+                    respond.append(result.item)
+                context = json.dumps(respond, indent=2)    
         except:
             response = "No Data"
             context = json.dumps(response, indent=2)
@@ -48,8 +52,8 @@ def Add_to_do_items():
             response =  "Record Added"
         except:    
             response =  "Record Not Added"
-    return jsonify({'tst':response})
+    return jsonify({'message':response})
 
 if __name__ == '__main__':
     # db.create_all()
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)

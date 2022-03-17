@@ -14,9 +14,15 @@ body {
   padding: 10px;
 }
 
-.home-container  h1 ,h2 , p{
+.home-container  h1 ,h2 , h5,p {
   text-align: center;
 }
 .To_DO_search{
+  text-align: center;
+}
+.homebtn{
+  text-align: center;
+}
+.responce_message{
   text-align: center;
 }
