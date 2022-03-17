@@ -1,0 +1,37 @@
+Welcome to "TO DO LIST" 
+
+For setup: 
+Using PostgreSQL(pgAdmin) create a DB called "MyToDoList"
+Update user credentials in the backend file that connects to the database
+    Location: ./BackEnd/index.py
+    Line : 7
+    replace : "admin" with own user credentials
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin@localhost/MyToDoList'
+
+using Docker-Compose:
+run command : docker-compose up
+
+
+To run applications in own terminal 
+open each of the following folders in its own terminal:
+        : BackEnd
+        : FrontEnd
+
+To start the back end service run command : 
+    python index.py
+
+To start the Front end service :
+    change directory to 
+        : todolist_frontend
+    dir will look like :
+        : FrontEnd/todolist_frontend
+    run command :
+        :pserve development.ini
+        or 
+        :pserve development.ini --reload
+
+
+Thank you for the Learning opportunity, i have learned how to use Python pyramid and also SQLAlchemy, i learned a lot more on Docker
+and believe with more time and even help i would be able to understand and know a lot more, also with Python pyramid and SQLAlchemy.
+
+Thank you
